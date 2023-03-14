@@ -1,0 +1,39 @@
+// --- CUSTOM VARIABLES ---
+:root {
+    //colors
+    --clr-light: #E5E5E6;
+    --clr-brown: #392733;
+    --clr-cyan-1: #D1E4D9; //gradient-top
+    --clr-cyan-2: #C8E5E2; //gradient-bottom
+
+    //font-sizes
+    --fs-normal: 1.6rem; 
+    --fs-medium-1: 1.8rem;
+    --fs-large: 2rem; 
+    --fs-huge: 8rem; 
+    
+    //font-family
+    --ff-montserrat: 'Montserrat', sans-serif;
+
+    //font-weight
+    --fw-regular: 400,
+    --fw-semi-bold: 600
+    --fw-extra-bold: 800;
+
+    //letter-spacing
+    --letter-spacing-regular: 0.05em;
+
+    //container sizes
+    // --container-max-width: 1180px;
+    // --container-normal-width: 800px;
+    // --container-medium-width: 700px; 
+    // --container-small-width: 500px;
+
+    //gutters
+    // --gutter-huge: 10rem;
+    // --gutter-medium: 5rem;
+    // --gutter-normal: 3rem;
+    // --gutter-small-1: 2.5rem;
+    // --gutter-small: 2rem;
+    // --gutter-x-small: 1rem;
+}

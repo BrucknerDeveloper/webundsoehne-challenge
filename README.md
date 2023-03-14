@@ -13,10 +13,11 @@ This project is a challenge for a job-interview.
 * Javascript/Typescript
 * GSAP (Animations)
 * GIT
+* Figma
 
 ## Progress Checklist 
 - [ ] Project Setup
-- [x] Design
+- [ ] Design
 - [ ] Responsive
 - [ ] Animations
 - [ ] REDUX
