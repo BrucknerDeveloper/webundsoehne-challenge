@@ -4,7 +4,8 @@
     --clr-light: #E5E5E6;
     --clr-brown: #392733;
     --clr-cyan-1: #D1E4D9; //gradient-top
-    --clr-cyan-2: #C8E5E2; //gradient-bottom
+    --clr-cyan-2: #C8E5E2; //gradient-middle
+    --clr-light-pink: #c3b5c5; //gradient-bottom
 
     //font-sizes
     --fs-normal: 1.6rem; 
@@ -16,8 +17,8 @@
     --ff-montserrat: 'Montserrat', sans-serif;
 
     //font-weight
-    --fw-regular: 400,
-    --fw-semi-bold: 600
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
     --fw-extra-bold: 800;
 
     //letter-spacing

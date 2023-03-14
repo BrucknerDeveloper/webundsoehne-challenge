@@ -1,0 +1,29 @@
+//typography
+.title {
+    font-size: var(--fs-huge);
+    color: var(--clr-brown);
+    font-weight: var(--fw-extra-bold);
+}
+
+.subtitle {
+    font-size: var(--fs-large);
+    color: var(--clr-brown);
+    font-weight: var(--fw-extra-bold);
+}
+
+.paragraph {
+    font-weight: var(--fw-semi-bold);
+}   
+
+//button
+.btn {
+    color: var(--clr-light);
+    background-color: var(--clr-brown);
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    font-weight: var(--fw-extra-bold);
+}
+
+.btn--light {
+    font-weight: var(--fw-regular);
+}
