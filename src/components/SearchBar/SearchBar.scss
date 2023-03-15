@@ -2,4 +2,31 @@
     background: rgb(195,181,197);
     background: linear-gradient(0deg, var(--clr-light-pink) 0%, var(--clr-cyan-2) 100%);    
     min-height: 100vh;
+    padding-top: var(--gutter-medium);
+}
+
+.searchBar__form {
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    gap: 25px;
+    width: 100%;
+    max-width: 700px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+
+    & .searchBar__input{
+        border: none;
+        background-color: transparent;
+        padding: 1rem;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    & .searchBar__btn {
+
+    }
 }
