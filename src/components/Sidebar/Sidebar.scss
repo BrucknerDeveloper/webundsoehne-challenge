@@ -1,0 +1,28 @@
+.sidebar {
+    position: fixed;
+    top: 50px;
+    left: 0;
+}
+
+.sidebar__btn {
+    background-color: var(--clr-brown);
+    transform: translateX(-50%);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    cursor: pointer;
+
+    & svg {
+        fill: var(--clr-light);
+        transition: transform .2s ease-in;
+    }
+
+    &:hover {
+        & svg { 
+            transform: translateX(5px);
+        }
+    }
+}
