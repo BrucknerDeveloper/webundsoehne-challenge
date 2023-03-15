@@ -13,17 +13,42 @@
 
 .paragraph {
     font-weight: var(--fw-semi-bold);
+    color: var(--clr-brown);
 }   
 
 //button
 .btn {
+    cursor: pointer;
     color: var(--clr-light);
     background-color: var(--clr-brown);
-    padding: 1rem 2rem;
+    padding: 1.25rem 2.5rem;
     border-radius: 5rem;
     font-weight: var(--fw-extra-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-regular);
+
+    &:hover {
+        opacity: .9;
+    }
 }
 
 .btn--light {
     font-weight: var(--fw-regular);
+}
+
+//gutter
+.gutter-small {
+    padding-inline: var(--gutter-small);
+}
+
+.gutter-normal {
+    padding-inline: var(--gutter-normal);
+}
+
+.gutter-medium {
+    padding-inline: var(--gutter-medium);
+}
+
+.gutter-huge {
+    padding-inline: var(--gutter-huge);
 }

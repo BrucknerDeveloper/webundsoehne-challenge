@@ -3,15 +3,15 @@
     //colors
     --clr-light: #E5E5E6;
     --clr-brown: #392733;
-    --clr-cyan-1: #D1E4D9; //gradient-top
-    --clr-cyan-2: #C8E5E2; //gradient-middle
+    --clr-cyan-1: #C8E5E2; //gradient-top
+    --clr-cyan-2: #D1E4D9; //gradient-middle
     --clr-light-pink: #c3b5c5; //gradient-bottom
 
     //font-sizes
-    --fs-normal: 1.6rem; 
+    --fs-normal: 1.5rem; 
     --fs-medium-1: 1.8rem;
-    --fs-large: 2rem; 
-    --fs-huge: 8rem; 
+    --fs-large: 1.6rem; 
+    --fs-huge: 4.5rem; 
     
     //font-family
     --ff-montserrat: 'Montserrat', sans-serif;
@@ -22,7 +22,7 @@
     --fw-extra-bold: 800;
 
     //letter-spacing
-    --letter-spacing-regular: 0.05em;
+    --letter-spacing-regular: 0.075em;
 
     //container sizes
     // --container-max-width: 1180px;
@@ -31,10 +31,38 @@
     // --container-small-width: 500px;
 
     //gutters
-    // --gutter-huge: 10rem;
-    // --gutter-medium: 5rem;
-    // --gutter-normal: 3rem;
-    // --gutter-small-1: 2.5rem;
-    // --gutter-small: 2rem;
-    // --gutter-x-small: 1rem;
+    --gutter-huge: 10rem;
+    --gutter-medium: 5rem;
+    --gutter-normal: 3rem;
+    --gutter-small: 2rem;
+}
+
+//media-queries 
+$mq-mobile: 480px;
+$mq-tablet: 768px;
+$mq-laptop: 1024px;
+$mq-desktop: 1440px;
+
+
+@media(min-width: $mq-tablet) {
+    :root {
+        //font-sizes
+        --fs-normal: 1.6rem; 
+        --fs-medium-1: 1.8rem;
+        --fs-large: 2rem; 
+        --fs-huge: 6rem; 
+
+        //gutters
+        --gutter-medium: 6rem;
+    }
+}
+
+@media(min-width: $mq-laptop) {
+    :root {
+        //font-sizes
+        --fs-huge: 8rem; 
+
+        //gutters
+        --gutter-medium: 10rem;
+    }
 }
