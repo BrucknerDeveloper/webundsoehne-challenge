@@ -1,10 +1,10 @@
 import React from "react"
 
-export default function Intro() {
+export default function Intro(props: any) {
 
     return (
         <div className="gif">
-            <h2>I am a gif</h2>
+            <img src={props.gif}/>
         </div>
     )
 }
