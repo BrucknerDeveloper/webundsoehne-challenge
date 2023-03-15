@@ -1,5 +1,7 @@
 import React from "react"
 
+import Gif from "../gif"
+
 export default function SearchBar() {
 
     return (
@@ -12,7 +14,16 @@ export default function SearchBar() {
                 <button className="searchBar__btn btn btn--light">Search</button>
             </form>
             <div className="searchBar__container-results">
-
+                <Gif />
+                <Gif />
+                <Gif />
+                <Gif />
+                <Gif />
+                <Gif />
+                <Gif />
+                <Gif />
+                <Gif />
+                <Gif />
             </div>
         </section>
     )
