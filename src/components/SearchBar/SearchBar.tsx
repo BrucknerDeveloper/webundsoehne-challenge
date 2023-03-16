@@ -21,7 +21,7 @@ export default function SearchBar() {
 
   const apiKey = '&api_key=vf7nDm11F3X2Pe63jIGjWWPiFCFCZXM8';
   const query = `&q=${queryInput}`;
-  const limit = '&limit=10';
+  const limit = '&limit=12';
 
   useEffect(() => {
     fetchData();
@@ -39,8 +39,6 @@ export default function SearchBar() {
       console.error(`ERROR: ${error}`)
     }
   }
-
-  console.log(state)
 
   return (
     <section className="searchBar gutter-medium" id="search">
