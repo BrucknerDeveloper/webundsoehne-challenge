@@ -2,11 +2,18 @@
     width: 200px;
     height: 200px;
     overflow: hidden;
+    position: relative;
 
-    & img {
+    & .gif__img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    & .gif__heart {
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 }
 
