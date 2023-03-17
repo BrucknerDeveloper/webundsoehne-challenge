@@ -3,7 +3,6 @@
     top: 50px;
     left: 0;
     position: relative;
-    transition: all .5 ease-in;
 }
 
 .sidebar__btn {
@@ -18,6 +17,7 @@
     justify-content: right;
     align-items: center;
     cursor: pointer;
+    transition: margin .25s linear;
 
     & svg {
         fill: var(--clr-light);
@@ -41,13 +41,13 @@
     background-color: #30A2A3;
     width: 30vw;
     min-width: 250px;
-    animation: example .25s ease-out;
     
     display: grid;
     grid-template: 1fr 1fr 1fr 1fr 1fr / repeat(auto-fit, minmax(200px, 1fr));
     justify-items: center;
     align-items: center;
     gap: 25px;
+    animation-fill-mode: forwards !important; //onAnimation has a bug. Before unmount there is a creates short flicker
 
     & .gif {
         overflow: initial;
@@ -64,7 +64,20 @@
 
 }
 
-@keyframes example {
-    from {transform: translateX(-100%);}
-    to {transform: translateX(0);}
-}
+@keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+  }
