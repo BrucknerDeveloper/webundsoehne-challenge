@@ -24,7 +24,7 @@ export default function Sidebar() {
 
   // --- STYLES  ---
   const btnStyles = {
-    marginLeft: show ? "30vw" : "0"
+    marginLeft: show ? isMobile ? "250px" : "30vw" : "0"
   }
 
   const svgStyles = {
@@ -50,9 +50,11 @@ export default function Sidebar() {
           style={sideBarContainerStyles}
         >
           {
+            gifs.length ?
             gifs.map((item: any)=> {
               return <Gif gif={item.url} id={item.id} key={item.id} />
-            })
+            }) :
+            <h2 className='sidebar__fallbackText paragraph'>Seems you don't have any favourite gifs yet✨</h2>
           }
         </div>
       }

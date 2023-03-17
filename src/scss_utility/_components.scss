@@ -26,6 +26,7 @@
     font-weight: var(--fw-extra-bold);
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing-regular);
+    transition: all .1s ease-in;
 
     &:hover {
         opacity: .9;
@@ -37,18 +38,6 @@
 }
 
 //gutter
-.gutter-small {
-    padding-inline: var(--gutter-small);
-}
-
-.gutter-normal {
-    padding-inline: var(--gutter-normal);
-}
-
 .gutter-medium {
     padding-inline: var(--gutter-medium);
-}
-
-.gutter-huge {
-    padding-inline: var(--gutter-huge);
 }

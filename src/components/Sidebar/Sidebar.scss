@@ -36,7 +36,6 @@
     position: fixed;
     padding: 25px;
     top: 0;
-    left: 0;
     height: 100vh;
     background-color: #30A2A3;
     width: 30vw;
@@ -62,6 +61,9 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 
+    & .sidebar__fallbackText  {
+        text-align: center;
+    }
 }
 
 @keyframes slideIn {
