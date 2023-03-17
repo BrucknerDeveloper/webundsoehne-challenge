@@ -17,5 +17,23 @@
         fill: red;
         cursor: pointer;
     }
-}
+    
+    & .gif__copy-icon {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        fill: var(--clr-light);
+        cursor: pointer;
+        border-radius: 20%;
 
+
+        &:not(:active) {
+            /* now keep animation for 1s */
+            transition: all 1000ms;
+        }
+        
+        &:active {
+            background: black;
+        }
+    }
+}

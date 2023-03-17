@@ -36,11 +36,18 @@
     justify-items: center;
     align-items: center;
     gap: 25px;
-    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
-    grid-auto-rows: minmax(175px, 200px);
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+    grid-auto-rows: minmax(125px, 150px);
 }
 
 .searchBar__loadMore-btn {
     display: block;
     margin: auto;
+}
+
+@media(min-width: $mq-tablet) {
+    .searchBar__container-results {
+        grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+        grid-auto-rows: minmax(175px, 200px);
+    }
 }
