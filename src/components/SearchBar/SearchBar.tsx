@@ -13,31 +13,34 @@ type resultProps = {
       }
     }
   ];
-};
+}
 
 export default function SearchBar() {
   const [queryInput, setQueryInput] = useState("happy dog")
-  const [state, setState] = useState<resultProps>();
+  const [gifs, setGifs] = useState<resultProps>();
+  const [offsetValue, setoffsetValue] = useState(0)
 
   const apiKey = '&api_key=vf7nDm11F3X2Pe63jIGjWWPiFCFCZXM8';
   const query = `&q=${queryInput}`;
-  const limit = '&limit=12';
+  const limit = `&limit=12`;
+  const offset = `&offset=${offsetValue}`;
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [offset]);
 
   async function fetchData() {
     try {
       const response = await fetch(
-        `https://api.giphy.com/v1/gifs/search?${apiKey}${query}${limit}`
+        `https://api.giphy.com/v1/gifs/search?${apiKey}${query}${limit}${offset}`
       );
       const data = await response.json();
-      setState(data);
+      setGifs(data)
     }
     catch (error) {
       console.error(`ERROR: ${error}`)
     }
+
   }
 
   return (
@@ -55,11 +58,12 @@ export default function SearchBar() {
       </form>
       <div className="searchBar__container-results">
         {
-            state?.data.map(item => {
+            gifs?.data.map(item => {
                 return <Gif gif={item.images.original.url} id={item.id} key={item.id} />
             })
-        }
+        }        
       </div>
+      <button onClick={()=> setoffsetValue(prev => prev + 12)} className='searchBar__loadMore-btn btn'>Reload</button>
     </section>
   );
 }
