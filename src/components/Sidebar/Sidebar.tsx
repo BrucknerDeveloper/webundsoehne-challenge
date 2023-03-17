@@ -54,7 +54,7 @@ export default function Sidebar() {
             gifs.map((item: any)=> {
               return <Gif gif={item.url} id={item.id} key={item.id} />
             }) :
-            <h2 className='sidebar__fallbackText paragraph'>Seems you don't have any favourite gifs yet...</h2>
+            <h2 className='sidebar__fallbackText paragraph'>Seems you don't have any favourite gifs yet✨</h2>
           }
         </div>
       }

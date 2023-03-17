@@ -1,5 +1,11 @@
 import React from "react"
 
+// --- GSAP ---
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 //imgs
 import heroImage from "../assets/upscaledVersionChallenge.jpg"
 
@@ -13,7 +19,7 @@ export default function Intro() {
                 <p className="intro__description paragraph">GIFs are popular on the internet for conveying emotions, reactions, or conveying a message in a humorous or creative way. </p>
                 <a className="intro__btn btn" aria-label="button" href="#search">Discover gifs</a>
             </div>
-            <img className="intro__hero-img" src={heroImage} />
+            <img className="intro__hero-img" alt="creative introduction img" src={heroImage} />
         </section>
     )
 }
