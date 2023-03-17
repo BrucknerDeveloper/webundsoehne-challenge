@@ -62,6 +62,9 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 
+    & .sidebar__fallbackText  {
+        text-align: center;
+    }
 }
 
 @keyframes slideIn {
