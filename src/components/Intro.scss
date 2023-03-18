@@ -10,6 +10,10 @@
     padding-top: var(--gutter-medium);
     text-align: center;
 
+    & > * {
+        opacity: 0; //inital loading shows text for a short time before animating therefore opacity 0.
+    }
+
     & .intro__author {
         opacity: .5;
     }
@@ -26,8 +30,6 @@
     }
 }
 
-
-
 .intro__hero-img {
     position: absolute;
     bottom: 0;
@@ -38,6 +40,28 @@
     object-fit: contain;
     object-position: right;
     z-index: 1;
+}
+
+
+.intro__hero-bird {
+    position: absolute;
+    top: 50px;
+    right: 40vw;
+    width: 10vw;
+}
+
+.intro__hero-cloud {
+    position: absolute;
+    top: 50px;
+    right: 40vw;
+    width: 10vw;
+}
+
+.intro__hero-balloon {
+    position: absolute;
+    top: 6vw;
+    right: 15vw;
+    width: 10vw;
 }
 
 // --- media-queries ---

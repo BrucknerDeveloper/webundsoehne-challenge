@@ -47,7 +47,7 @@
     justify-items: center;
     align-items: center;
     gap: 25px;
-    animation-fill-mode: forwards !important; //onAnimation has a bug. Before unmount there is a creates short flicker
+    animation-fill-mode: forwards !important; //onAnimation has a bug. Before unmount there is a short flicker
 
     & .gif {
         overflow: initial;

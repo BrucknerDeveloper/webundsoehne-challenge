@@ -12,7 +12,7 @@ type resultProps = {
         };
         downsized_medium: {
           url: string;
-        }
+        };
       };
     }
   ];
@@ -43,9 +43,6 @@ export default function SearchBar() {
       console.error(`ERROR: ${error}`);
     }
   }
-  
-  console.log(gifs?.data)
-
 
   return (
     <section className='searchBar gutter-medium' id='search'>
@@ -71,9 +68,7 @@ export default function SearchBar() {
           return <Gif gif={item.images.downsized_medium.url} id={item.id} key={item.id} />;
         })}
 
-        {
-          !gifs?.data.length && <h1 className="subtitle">There was a problem fetching the data</h1>
-        }
+        {!gifs?.data.length && <h1 className='subtitle'>There was a problem fetching the data</h1>}
       </div>
       <button
         onClick={() => setoffsetValue(prev => prev + 12)}

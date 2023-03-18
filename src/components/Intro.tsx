@@ -12,19 +12,16 @@ import heroImage from '../assets/upscaledVersionChallenge.jpg';
 export default function Intro() {
     const containerRef = useRef(null);
 
-    
-
     useEffect(() => {
         const elements = [...containerRef.current?.children];
-        console.log(elements)
 
         elements.forEach((child: any) => {
             const timeline = gsap.timeline();
-            timeline.fromTo(elements, 
+            timeline.fromTo(elements,
                 {
                     y: -20,
                     opacity: 0
-                }, 
+                },
                 {
                     y: 0,
                     opacity: 1,
@@ -34,9 +31,9 @@ export default function Intro() {
                         from: "start",
                         amount: .1
                     }
-                },     
+                },
             )
-        })  
+        })
     }, [])
 
     return (
@@ -54,7 +51,7 @@ export default function Intro() {
                     <a href='#search'>
                         Discover gifs
                     </a>
-                </button>         
+                </button>
             </div>
             <img className='intro__hero-img' alt='creative introduction img' src={heroImage} />
         </section>
