@@ -1,7 +1,10 @@
 .gif {
     overflow: hidden;
     position: relative;
-
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-light);
+    
     & .gif__img {
         width: 100%;
         height: 100%;
@@ -14,6 +17,33 @@
         right: 0;
         fill: red;
         cursor: pointer;
+
+        &:not(:active) {
+            /* now keep animation for 1s */
+            transition: transform .25s ease-in;
+        }
+        
+        &:active {
+            transform: scale(1.1) rotate(15deg);
+        }  
+    }
+    
+    & .gif__copy-icon {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        fill: var(--clr-light);
+        cursor: pointer;
+        border-radius: 20%;
+
+
+        &:not(:active) {
+            /* now keep animation for 1s */
+            transition: all 1000ms;
+        }
+        
+        &:active {
+            background: var(--clr-brown);
+        }      
     }
 }
-
