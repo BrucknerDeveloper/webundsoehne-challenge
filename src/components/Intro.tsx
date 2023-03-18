@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 import heroImage from '../assets/upscaledVersionChallenge.jpg';
 
 export default function Intro() {
-    const containerRef = useRef(null);
+    const containerRef = useRef<any>(null);
 
     useEffect(() => {
         const elements = [...containerRef.current?.children];
