@@ -27,6 +27,7 @@ export default function Intro() {
                     opacity: 1,
                     duration: .75,
                     ease: "power1.inOut",
+                    delay: .25,
                     stagger: {
                         from: "start",
                         amount: .1

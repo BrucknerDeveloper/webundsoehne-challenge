@@ -27,7 +27,6 @@
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing-regular);
     transition: opacity .1s ease-in;
-    opacity: 0; // for gsap
     
     &:hover {
         opacity: .9 !important; //needs important or else gsap overwrites it
