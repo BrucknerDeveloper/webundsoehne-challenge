@@ -16,9 +16,9 @@ This project is a challenge for a job-interview.
 * Figma
 
 ## Progress Checklist 
-- [ ] Project Setup
-- [ ] Design
-- [ ] Responsive
-- [ ] Animations
-- [ ] REDUX
-- [ ] GIT
+- [x] Project Setup
+- [x] Design
+- [x] Responsive
+- [x] Animations
+- [x] REDUX
+- [x] GIT
