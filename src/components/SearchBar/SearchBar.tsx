@@ -5,20 +5,23 @@ import Gif from '../Gif';
 type resultProps = {
   data: [
     {
-      id: number
+      id: number;
       images: {
         original: {
           url: string;
-        }      
-      }
+        };
+        downsized_medium: {
+          url: string;
+        }
+      };
     }
   ];
-}
+};
 
 export default function SearchBar() {
-  const [queryInput, setQueryInput] = useState("happy dog")
+  const [queryInput, setQueryInput] = useState('happy dog');
   const [gifs, setGifs] = useState<resultProps>();
-  const [offsetValue, setoffsetValue] = useState(0)
+  const [offsetValue, setoffsetValue] = useState(0);
 
   const apiKey = '&api_key=vf7nDm11F3X2Pe63jIGjWWPiFCFCZXM8';
   const query = `&q=${queryInput}`;
@@ -35,35 +38,49 @@ export default function SearchBar() {
         `https://api.giphy.com/v1/gifs/search?${apiKey}${query}${limit}${offset}`
       );
       const data = await response.json();
-      setGifs(data)
+      setGifs(data);
+    } catch (error) {
+      console.error(`ERROR: ${error}`);
     }
-    catch (error) {
-      console.error(`ERROR: ${error}`)
-    }
-
   }
+  
+  console.log(gifs?.data)
+
 
   return (
-    <section className="searchBar gutter-medium" id="search">
-      <form className="searchBar__form">
-        <input onChange={(e) => setQueryInput(e.target.value)} className="searchBar__input" placeholder="Find gifs" value={queryInput} />
-        <button onClick={(e) => {
-          e.preventDefault();
-          fetchData()
-          }} 
-          className="searchBar__btn btn btn--light"
+    <section className='searchBar gutter-medium' id='search'>
+      <form className='searchBar__form'>
+        <input
+          onChange={e => setQueryInput(e.target.value)}
+          className='searchBar__input'
+          placeholder='Find gifs'
+          value={queryInput}
+        />
+        <button
+          onClick={e => {
+            e.preventDefault();
+            fetchData();
+          }}
+          className='searchBar__btn btn btn--light'
         >
           Search
         </button>
       </form>
-      <div className="searchBar__container-results">
+      <div className='searchBar__container-results'>
+        {gifs?.data.map(item => {
+          return <Gif gif={item.images.downsized_medium.url} id={item.id} key={item.id} />;
+        })}
+
         {
-            gifs?.data.map(item => {
-                return <Gif gif={item.images.original.url} id={item.id} key={item.id} />
-            })
-        }        
+          !gifs?.data.length && <h1 className="subtitle">There was a problem fetching the data</h1>
+        }
       </div>
-      <button onClick={()=> setoffsetValue(prev => prev + 12)} className='searchBar__loadMore-btn btn'>Reload</button>
+      <button
+        onClick={() => setoffsetValue(prev => prev + 12)}
+        className='searchBar__loadMore-btn btn'
+      >
+        Reload
+      </button>
     </section>
   );
 }

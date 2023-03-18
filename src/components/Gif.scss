@@ -3,6 +3,7 @@
     position: relative;
     width: 100%;
     height: 100%;
+    background-color: var(--clr-light);
     
     & .gif__img {
         width: 100%;
@@ -16,6 +17,15 @@
         right: 0;
         fill: red;
         cursor: pointer;
+
+        &:not(:active) {
+            /* now keep animation for 1s */
+            transition: transform .25s ease-in;
+        }
+        
+        &:active {
+            transform: scale(1.1) rotate(15deg);
+        }  
     }
     
     & .gif__copy-icon {
@@ -34,6 +44,6 @@
         
         &:active {
             background: black;
-        }
+        }      
     }
 }
